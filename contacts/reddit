@@ -1,0 +1,3 @@
+printf "%s\n" "${whb}#### Reddit  ${end}"
+printf "%s\n" "${blu} - /u/okami_dash  ${end}"
+printf "%s\n" " link: https://reddit.com/u/okami_dash"

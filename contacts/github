@@ -1,0 +1,3 @@
+printf "%s\n" "${whb}#### Github  ${end}"
+printf "%s\n" "${grn} - okamidash  ${end}"
+printf "%s\n" " link: https://github.com/okamidash"
