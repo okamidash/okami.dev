@@ -6,10 +6,11 @@ RUN rm /bin/dd
 RUN rm /bin/cp
 COPY entrypoint.sh /var/opt/entry.sh
 RUN chmod +x /var/opt/entry.sh
+
 ENTRYPOINT ["/var/opt/entry.sh"]
-USER you
 COPY conf /home/you/config/zsh
 COPY conf/zshrc /home/you/.zshrc
 COPY printout /home/you/printout
 COPY contacts /home/you/contacts
-
+RUN chown -R you:you /home/you
+USER you
