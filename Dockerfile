@@ -1,5 +1,5 @@
 FROM alpine
-RUN apk add zsh fzf ncurses neofetch ruby
+RUN apk add zsh fzf ncurses neofetch ruby sl
 RUN gem install --no-rdoc --no-ri lolcat
 RUN adduser -s /bin/zsh -D you
 RUN rm /bin/dd

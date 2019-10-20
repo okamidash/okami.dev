@@ -47,5 +47,5 @@ end=$'\e[0m'
 
 alias '?'='help'
 alias clear="clear && source /home/you/printout/start"
-alias dd="echo 'oh no you don't"
+alias dd="sl -F"
 source /home/you/printout/start
