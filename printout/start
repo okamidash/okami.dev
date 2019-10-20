@@ -1,5 +1,5 @@
 echo " "
-lolcat /root/printout/banner
+lolcat /home/you/printout/banner
 
 print_centered "" "-"
 printf "%s\n" " ${blub}Homepage${end}         ${grn}https://okami.dev${end}"

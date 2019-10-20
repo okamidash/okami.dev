@@ -46,5 +46,6 @@ cynb=$'\e[1;36m'
 end=$'\e[0m'
 
 alias '?'='help'
-alias clear="clear && source /root/printout/start"
-source /root/printout/start
+alias clear="clear && source /home/you/printout/start"
+alias dd="echo 'oh no you don't"
+source /home/you/printout/start
