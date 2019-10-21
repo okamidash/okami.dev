@@ -12,5 +12,7 @@ COPY conf /home/you/config/zsh
 COPY conf/zshrc /home/you/.zshrc
 COPY printout /home/you/printout
 COPY contacts /home/you/contacts
+RUN sed -i -e 's/^root::/root:!:/' /etc/shadow
+RUN apk del fuse
 RUN chown -R you:you /home/you
 USER you
