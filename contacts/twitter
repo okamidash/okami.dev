@@ -1,3 +1,0 @@
-printf "%s\n" "${whb}#### Twitter  ${end}"
-printf "%s\n" "${yel} - @okamidash  ${end}"
-printf "%s\n" " link: https://twitter.com/okami_dash"

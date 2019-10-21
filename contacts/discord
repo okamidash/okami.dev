@@ -1,2 +1,0 @@
-printf "%s\n" "${whb}#### Discord  ${end}"
-printf "%s\n" "${mag} - okami#1010  ${end}"

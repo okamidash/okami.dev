@@ -51,6 +51,14 @@ function help {
     printf "%s \n" "    - ${redb}about${end}"
     printf "%s \n" "    - ${blub}skills${end}"
     printf "%s \n" "    - ${magb}contact${end}"
+    printf "%s \n" "    - ${yelb}services${end}"
+    rando
+}
+
+function rando {
+    FUNCMDS=("dd" "fortune" "sl" "lolcat" "exp")
+    selectedexpression=${FUNCMDS[$RANDOM % ${#FUNCMDS[@]} ]}
+    printf "%s\n" " Hint: try ${blub}$selectedexpression ${end}"
 }
 
 function pcol {
@@ -58,11 +66,13 @@ function pcol {
     printf "%s\n" "${redb}redb${end} ${grnb}greenb${end} ${yelb}yellowb${end} ${blub}blueb${end} ${magb}magnetab${end} ${cynb}cyanb${end}"
 }
 function about {
+    print_centered "" "-"
     printf "%s\n" "${whb}#### About me${end}"
     printf "%s\n" "     I'm Eve. I'm from the UK and 21 years old."
     printf "%s\n" "     You'll find me either tinkering about with Containers, VMs or Hardware."
     printf "%s\n" "     I have a keen interest in running a homelab (much to the dismay of my powerbill)."
     printf "%s\n" "     My employment experience is fairly varied; but most of the time it's been in some form of tech."
+    printf "%s\n" "     Currently I work as a Software Tester, using tools like Eggplant and Jmeter."
     echo " "
     printf "%s\n" "${whb}#### Stats${end}"
     printf "%s\n" "     - Age:         21"
@@ -71,15 +81,19 @@ function about {
     printf "%s\n" "     - Gender:      Female (MtF)"
     echo " "
     printf "%s\n" "${whb}#### Interests${end}"
-    printf "%s\n" "     - Furry Community"
     printf "%s\n" "     - Linux"
     printf "%s\n" "     - DevOps"
     printf "%s\n" "     - Containerisation"
     printf "%s\n" "     - Networking"
+    print_centered "" "-"
+    printf "%s\n" "${whb}#### Source Code${end}"
+    printf "%s\n" " The source code is available below:"
+    printf "%s\n" " - https://git.doubledash.org/okami/okami.dev"
+    print_centered "" "-"
 }
 
 function skills {
-    
+    print_centered "" "-"
     printf "%s\n" "${whb}#### Skills${end}"
     printf "%s\n" "     - Linux Systems Administration"
     printf "%s\n" "     - Automation (Ansible)"
@@ -94,9 +108,39 @@ function skills {
     printf "%s\n" "     - Javascript"
     printf "%s\n" "     - HTML"
     printf "%s\n" "     - Python"
+    print_centered "" "-"
 }
 
 function contact {
-    OPTIONS="all \nemail \ndiscord \nreddit \ngithub \ntwitter \ntelegram \nkeybase"
-    source ~/contacts/$(echo $OPTIONS | fzf)
+    print_centered "" "-"
+    printf "%s\n" "Feel free to contact me if any of my services are down."
+    printf "%s\n" " ${whb}#### Email				#### Discord	#### Keybase${end}"
+    printf "%s\n" " - eve@doubledash.org			 - okami#1010	 - okamidash"
+    printf "%s\n" " - onetrickpone@protonmail.com		${whb}#### Twitter	#### Telegram${end}"
+    printf "%s\n" " - okami@doubledash.org		         - @okamidash	 - okamidash"
+    echo " "
+    printf "%s\n" " ${whb}#### Github				#### Reddit${end}"
+    printf "%s\n" "  - okamidash			 	 - /u/okami_dash"
+    printf "%s\n" " link: https://github.com/okamidash	link: https://reddit.com/u/okami_dash"
+    echo " "
+    printf "%s\n" " ${whb}#### Private Git${end}"
+    printf "%s\n" "  - okami"
+    printf "%s\n" " link: https://git.doubledash.org/okami"
+    print_centered "" "-"
+}
+
+function services {
+    print_centered "" "-"
+    printf "%s\n" " Here is a non exhaustive list of the services that I currently run"
+    printf "%s\n" " to give you an idea of the things I do:"
+    printf "%s\n" "  - Nextcloud    - Mariadb   - Ansible Tower"
+    printf "%s\n" "  - Nginx        - Plex      - Ghost"
+    printf "%s\n" "  - InfluxDB     - Grafana   - Telegraf"
+    printf "%s\n" "  - Jenkins      - Postgres  - Gitea"
+    echo " "
+    printf "%s\n" " And a list of public endpoints you can connect to:"
+    printf "%s\n" "  - Nextcloud    https://cloud.doubledash.org"
+    printf "%s\n" "  - Homepage     https://okami.dev"
+    printf "%s\n" "  - Blog         https://blog.okami.dev"
+    printf "%s\n" "  - Gitea        https://git.doubledash.org"
 }

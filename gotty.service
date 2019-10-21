@@ -12,7 +12,7 @@ User=okami
 Group=okami
 
 Environment=TERM=xterm-256color
-ExecStart=/home/okami/go/bin/gotty --title-format okami.dev --close-timeout 2 -w docker run -it --rm -m 32m --cpus=0.5 --read-only --hostname homepage --net none okamidev
+ExecStart=/home/okami/go/bin/gotty --title-format okami.dev --close-timeout 2 -w docker run -it --rm -m 32m --cpus=0.5 --read-only --hostname homepage --net none -u root okamidev
 
 [Install]
 WantedBy=multi-user.target

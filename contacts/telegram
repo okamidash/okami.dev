@@ -1,3 +1,0 @@
-printf "%s\n" "${whb}#### Telegram  ${end}"
-printf "%s\n" "${red} - okamidash  ${end}"
-printf "%s\n" " link: https://t.me/okamidash"

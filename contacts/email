@@ -1,4 +1,0 @@
-printf "%s\n" "${whb}#### Email${end}"
-printf "%s\n" "${blu} - okami@doubledash.org ${end}"
-printf "%s\n" "${mag} - onetrickpone@protonmail.com ${end}"
-printf "%s\n" "${red} - eve.rogers@ibm.com ${end}"

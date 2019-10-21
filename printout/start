@@ -2,9 +2,8 @@ echo " "
 lolcat /home/you/printout/banner
 
 print_centered "" "-"
-printf "%s\n" " ${blub}Homepage${end}         ${grn}https://okami.dev${end}"
-printf "%s\n" " ${blub}Blog${end}             ${grn}https://blog.okami.dev${end}"
-printf "%s\n" " ${blub}Cloud Storage${end}    ${grn}https://cloud.doubledash.org${end}"
+printf "%s\n" " ${blub}Homepage${end}         ${grn}https://okami.dev${end}             ${blub}email${end}      ${grn}eve@doubledash.org${end}"
+printf "%s\n" " ${blub}Blog${end}             ${grn}https://blog.okami.dev${end}        ${blub}twitter${end}    ${grn}@okami_dash${end}"
 print_centered "" "-"
 printf "%s\n" " All comments and opinions expressed are my own and are not representative of my employers"
 printf "%s\n" " Copyright © 2019 Eve R. All right reserved. "
