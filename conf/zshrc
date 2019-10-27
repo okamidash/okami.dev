@@ -48,4 +48,6 @@ end=$'\e[0m'
 alias '?'='help'
 alias clear="clear && source /home/you/printout/start"
 alias dd="sl -F"
-source /home/you/printout/start
+python3 /opt/systemd_py/systemd.py
+sleep 1
+clear

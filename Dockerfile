@@ -1,9 +1,10 @@
 FROM alpine
-RUN apk add zsh fzf ncurses neofetch ruby sl fortune
+RUN apk add zsh fzf ncurses neofetch ruby sl fortune python3 git
 RUN gem install --no-rdoc --no-ri lolcat
+RUN python3 -m pip install colored
+RUN git clone https://git.doubledash.org/okami/systemd.py.git /opt/systemd_py
 RUN adduser -s /bin/zsh -D you
-RUN rm /bin/dd
-RUN rm /bin/cp
+RUN rm /bin/dd /bin/cp /usr/bin/md5sum /usr/bin/xargs
 COPY entrypoint.sh /var/opt/entry.sh
 RUN chmod +x /var/opt/entry.sh
 
