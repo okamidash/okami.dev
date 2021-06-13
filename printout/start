@@ -6,7 +6,7 @@ printf "%s\n" " ${blub}Homepage${end}         ${grn}https://okami.dev${end}     
 printf "%s\n" " ${blub}Blog${end}             ${grn}https://blog.okami.dev${end}        ${blub}twitter${end}    ${grn}@okami_dash${end}"
 print_centered "" "-"
 printf "%s\n" " All comments and opinions expressed are my own and are not representative of my employers"
-printf "%s\n" " Copyright © 2019 Eve R. All right reserved. "
+printf "%s\n" " Copyright © 2021 Eve R. All right reserved. "
 print_centered "" "-"
 
 printf "%s\n" "Type ${redb}?${end} or ${redb}help${end} for help"
