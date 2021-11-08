@@ -51,7 +51,6 @@ function help {
     printf "%s \n" "    - ${redb}about${end}"
     printf "%s \n" "    - ${blub}skills${end}"
     printf "%s \n" "    - ${magb}contact${end}"
-    printf "%s \n" "    - ${yelb}services${end}"
     rando
 }
 
@@ -68,14 +67,14 @@ function pcol {
 function about {
     print_centered "" "-"
     printf "%s\n" "${whb}#### About me${end}"
-    printf "%s\n" "     I'm Eve. I'm from the UK and 21 years old."
+    printf "%s\n" "     I'm Eve. I'm from the UK and 23 years old."
     printf "%s\n" "     You'll find me either tinkering about with Containers, VMs or Hardware."
     printf "%s\n" "     I have a keen interest in running a homelab (much to the dismay of my powerbill)."
     printf "%s\n" "     My employment experience is fairly varied; but most of the time it's been in some form of tech."
-    printf "%s\n" "     Currently I work as a Software Tester, using tools like Eggplant and Jmeter."
+    printf "%s\n" "     Currently I work as a Software Tester, using tools like Gatling, Ansible, Python and whatever else :D"
     echo " "
     printf "%s\n" "${whb}#### Stats${end}"
-    printf "%s\n" "     - Age:         21"
+    printf "%s\n" "     - Age:         23"
     printf "%s\n" "     - Location:    South UK"
     printf "%s\n" "     - Employed by: ${blub}IBM${end}"
     printf "%s\n" "     - Gender:      Female (MtF)"
@@ -88,7 +87,7 @@ function about {
     print_centered "" "-"
     printf "%s\n" "${whb}#### Source Code${end}"
     printf "%s\n" " The source code is available below:"
-    printf "%s\n" " - https://git.doubledash.org/okami/okami.dev"
+    printf "%s\n" " - https://github.com/okamidash/okami.dev"
     print_centered "" "-"
 }
 
@@ -97,17 +96,14 @@ function skills {
     printf "%s\n" "${whb}#### Skills${end}"
     printf "%s\n" "     - Linux Systems Administration"
     printf "%s\n" "     - Automation (Ansible)"
-    printf "%s\n" "     - Nginx"
-    printf "%s\n" "     - Docker"
-    printf "%s\n" "     - Git"
-    printf "%s\n" "     - Basic Systems Networking (VLANS, Routing etc)"
+    printf "%s\n" "     - Docker/CRI"
+    printf "%s\n" "     - Kubernetes"
+    printf "%s\n" "     - Networking (VLANS, Routing etc)"
     printf "%s\n" "     - Virtualization"
     printf "%s\n" "${whb}#### Languages${end}"
-    printf "%s\n" "     - Bash"
-    printf "%s\n" "     - Java"
-    printf "%s\n" "     - Javascript"
-    printf "%s\n" "     - HTML"
     printf "%s\n" "     - Python"
+    printf "%s\n" "     - Bash"
+    printf "%s\n" "     - Golang"
     print_centered "" "-"
 }
 
@@ -123,24 +119,5 @@ function contact {
     printf "%s\n" "  - okamidash			 	 - /u/okami_dash"
     printf "%s\n" " link: https://github.com/okamidash	link: https://reddit.com/u/okami_dash"
     echo " "
-    printf "%s\n" " ${whb}#### Private Git${end}"
-    printf "%s\n" "  - okami"
-    printf "%s\n" " link: https://git.doubledash.org/okami"
     print_centered "" "-"
-}
-
-function services {
-    print_centered "" "-"
-    printf "%s\n" " Here is a non exhaustive list of the services that I currently run"
-    printf "%s\n" " to give you an idea of the things I do:"
-    printf "%s\n" "  - Nextcloud    - Mariadb   - Ansible Tower"
-    printf "%s\n" "  - Nginx        - Plex      - Ghost"
-    printf "%s\n" "  - InfluxDB     - Grafana   - Telegraf"
-    printf "%s\n" "  - Jenkins      - Postgres  - Gitea"
-    echo " "
-    printf "%s\n" " And a list of public endpoints you can connect to:"
-    printf "%s\n" "  - Nextcloud    https://cloud.doubledash.org"
-    printf "%s\n" "  - Homepage     https://okami.dev"
-    printf "%s\n" "  - Blog         https://blog.okami.dev"
-    printf "%s\n" "  - Gitea        https://git.doubledash.org"
 }

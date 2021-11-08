@@ -1,8 +1,25 @@
+FROM golang:1.17-alpine AS build
+
+#switch to our app directory
+RUN mkdir -p /build
+RUN apk add git
+RUN git clone https://github.com/oxide-one/systemd.go /build
+WORKDIR /build
+#copy the source files
+ENV CGO_ENABLED=0
+#build the binary with debug information removed
+RUN go mod download
+RUN GOOS=linux GOARCH=amd64 go build -ldflags="-w -s" -a -o systemd.go cmd/systemd-go/systemd.go
+RUN apk update && apk add upx
+RUN upx /build/systemd.go
+
+
 FROM alpine
-RUN apk add zsh fzf ncurses neofetch ruby sl fortune python3 git
-RUN gem install --no-rdoc --no-ri lolcat
-RUN python3 -m pip install colored
-RUN git clone https://git.doubledash.org/okami/systemd.py.git /opt/systemd_py
+COPY --from=build /build/systemd.go /bin/systemd.go
+RUN apk add zsh fzf ncurses neofetch ruby sl fortune
+RUN gem install --no-document lolcat
+#RUN python3 -m pip install colored
+#RUN git clone https://git.doubledash.org/okami/systemd.py.git /opt/systemd_py
 RUN adduser -s /bin/zsh -D you
 RUN rm /bin/dd /bin/cp /usr/bin/md5sum /usr/bin/xargs
 COPY entrypoint.sh /var/opt/entry.sh
