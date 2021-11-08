@@ -23,7 +23,7 @@ RUN make
 FROM alpine
 COPY --from=build /build/systemd.go /bin/systemd.go
 COPY --from=build /lolcat/lolcat /bin/lolcat
-RUN apk add zsh fzf ncurses neofetch sl fortune
+RUN apk add zsh fzf ncurses sl fortune
 RUN adduser -s /bin/zsh -D you
 RUN rm /bin/dd /bin/cp /usr/bin/md5sum /usr/bin/xargs
 COPY entrypoint.sh /var/opt/entry.sh
