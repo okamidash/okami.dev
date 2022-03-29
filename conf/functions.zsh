@@ -76,7 +76,7 @@ function about {
     printf "%s\n" "${whb}#### Stats${end}"
     printf "%s\n" "     - Age:         23"
     printf "%s\n" "     - Location:    South UK"
-    printf "%s\n" "     - Employed by: ${blub}IBM${end}"
+    printf "%s\n" "     - Employed by: ${blub}DigitalOcean${end}"
     printf "%s\n" "     - Gender:      Female (MtF)"
     echo " "
     printf "%s\n" "${whb}#### Interests${end}"
