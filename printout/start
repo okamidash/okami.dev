@@ -2,6 +2,10 @@ echo " "
 lolcat /home/you/printout/banner
 
 print_centered "" "-"
+printf "%s\n" "${blub}Friends of okami.dev${end}"
+printf "%s\n" "   ${grn}https://tigers.best${end}"
+printf "%s\n" "   ${grn}https://en0.io${end}"
+print_centered "" "-"
 printf "%s\n" " ${blub}Homepage${end}         ${grn}https://okami.dev${end}             ${blub}email${end}      ${grn}eve@doubledash.org${end}"
 printf "%s\n" " ${blub}Blog${end}             ${grn}https://blog.okami.dev${end}        ${blub}twitter${end}    ${grn}@okami_dash${end}"
 print_centered "" "-"
